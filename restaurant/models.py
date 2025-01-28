@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Menu(models.Model):
     ID = models.AutoField(primary_key=True)
     Title = models.CharField(max_length=255)
@@ -7,7 +8,7 @@ class Menu(models.Model):
     Inventory = models.IntegerField()
 
     def __str__(self):
-        return f'{self.Title}: {self.Price}'
+        return f"{self.Title} : {str(self.Price)}"
 
 
 class Booking(models.Model):
@@ -17,4 +18,4 @@ class Booking(models.Model):
     BookingDate = models.DateTimeField()
 
     def __str__(self):
-      return f'{self.Name}: {self.BookingDate}'
+        return f"{self.Name}: {self.BookingDate}"
